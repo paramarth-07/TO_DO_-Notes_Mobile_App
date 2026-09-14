@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#F7F7F5;}body{overscroll-behavior:none;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        background: "#F7F7F5",
+        surface: "#F7F7F5",
+        "surface-card": "#FFFFFF",
+        "surface-container": "#FFFFFF",
+        "surface-container-low": "#F4F4F2",
+        "surface-container-high": "#EAEAE6",
+        "on-surface": "#141414",
+        "on-surface-variant": "#7A7A78",
+        primary: "#F36C21",
+        "primary-container": "#F36C21",
+        "on-primary": "#FFFFFF",
+        "outline-subtle": "#EDEDE8",
+        "dark-pill": "#1A1A1A"
+      },
+      borderRadius: {
+        '2xl': '1.25rem',
+        '3xl': '1.75rem',
+        '4xl': '2rem'
+      }
+    }
+  }
+};</script></head><body class="bg-[#F7F7F5] text-[#141414] flex flex-col min-h-screen selection:bg-[#F36C21]/20"><main class="flex flex-col relative w-full pt-6 pt-safe pb-32 px-5 bg-[#F7F7F5] min-h-screen"><div class="flex flex-col w-full space-y-5">
+<!-- Top Greeting & Header Section (Inspired by the Reference Image "Good morning" hero & tactile icons) -->
+<header class="flex items-start justify-between pt-1">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="text-[34px] leading-[38px] font-bold text-[#141414] tracking-tight">Workspace</h2>
+</div>
+<div class="flex items-center gap-2 mt-1.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#F36C21] text-white text-[11px] font-semibold tracking-wide shadow-sm shadow-[#F36C21]/25">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+        Today
+      </span>
+<p class="text-[13px] text-[#7A7A78] font-medium">3 tasks due today</p>
+</div>
+</div>
+<div class="flex items-center gap-2.5 pt-1">
+<button aria-label="Search items" class="w-11 h-11 rounded-full bg-white border border-[#EDEDE8] flex items-center justify-center text-[#141414] shadow-[0_2px_8px_rgba(0,0,0,0.03)] hover:bg-[#F4F4F2] active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<button aria-label="Profile options" class="w-11 h-11 rounded-full bg-white border border-[#EDEDE8] p-0.5 shadow-[0_2px_8px_rgba(0,0,0,0.03)] active:scale-95 transition-all overflow-hidden" type="button">
+<img class="w-full h-full object-cover rounded-full" data-alt="User portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8VTu0VbfbT-tUM0ssQZzU4tTLRnKiXlTh_GD0HulrQIk3aDQLbZNQmMzHb7csQDV9fzkp2DrqZFLmbS9K5bGPTY0-XvBtnw_hryRdgtKgyXsXMY2zM6oNwB6SbzsRPSqUZeB34-Ebo_iA_iBmdi-uM9j5eKWXeLK1hT2FHEErGd36BWwDU647XOtD5SFHetwrvlyVwMPaUN7MODrIdpGACHN7yEyWTN01aDZ0-fCTEJMZnT2GoW_urA"/>
+</button>
+</div>
+</header>
+<!-- Horizontally Scrollable Filter Chips (Clean pill style matching reference segmented pills) -->
+<section class="w-full overflow-x-auto -mx-5 px-5 scrollbar-none flex items-center gap-2 py-1">
+<button class="flex-shrink-0 inline-flex items-center gap-1.5 h-9 px-4 rounded-full bg-[#1A1A1A] text-white text-[13px] font-semibold shadow-sm transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>All Tasks</span>
+</button>
+<button class="flex-shrink-0 inline-flex items-center gap-1.5 h-9 px-3.5 rounded-full bg-white border border-[#EDEDE8] text-[#555552] hover:text-[#141414] text-[13px] font-medium shadow-[0_2px_6px_rgba(0,0,0,0.02)] transition-colors active:bg-[#EAEAE6]" type="button">
+<span>Pending</span>
+<span class="px-1.5 py-0.2 rounded-full bg-[#F4F4F2] text-[#141414] text-[11px] font-bold">2</span>
+</button>
+<button class="flex-shrink-0 inline-flex items-center gap-1.5 h-9 px-3.5 rounded-full bg-white border border-[#EDEDE8] text-[#555552] hover:text-[#141414] text-[13px] font-medium shadow-[0_2px_6px_rgba(0,0,0,0.02)] transition-colors active:bg-[#EAEAE6]" type="button">
+<span class="material-symbols-outlined text-[17px] text-[#7A7A78]">description</span>
+<span>Notes</span>
+</button>
+<button class="flex-shrink-0 inline-flex items-center gap-1.5 h-9 px-3.5 rounded-full bg-[#F36C21]/10 text-[#F36C21] border border-[#F36C21]/20 font-semibold text-[13px] transition-colors active:bg-[#F36C21]/20" type="button">
+<span class="w-2 h-2 rounded-full bg-[#F36C21] inline-block"></span>
+<span>High Priority</span>
+</button>
+</section>
+<!-- Overview Bento Cards (Tactile off-white / pure white cards with soft circular progress gauges) -->
+<section class="grid grid-cols-2 gap-3.5">
+<!-- Card 1: Active Tasks Metric -->
+<div class="bg-white rounded-[26px] p-4 flex flex-col justify-between border border-[#EAEAE6] shadow-[0_4px_16px_rgba(0,0,0,0.03)] relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="text-[12px] text-[#7A7A78] font-semibold tracking-wide">Active Tasks</span>
+<!-- Mini circular gauge like reference -->
+<div class="relative w-6 h-6 flex items-center justify-center">
+<svg class="w-6 h-6 -rotate-90" viewbox="0 0 24 24">
+<circle cx="12" cy="12" fill="none" r="9" stroke="#EDEDE8" stroke-width="2.8"></circle>
+<circle cx="12" cy="12" fill="none" r="9" stroke="#F36C21" stroke-dasharray="56.5" stroke-dashoffset="22.6" stroke-linecap="round" stroke-width="2.8"></circle>
+</svg>
+</div>
+</div>
+<div class="my-2.5">
+<div class="text-[32px] font-bold text-[#141414] tracking-tight leading-none">5</div>
+</div>
+<div class="space-y-1.5 pt-1">
+<div class="w-full bg-[#F4F4F2] h-2 rounded-full overflow-hidden">
+<div class="bg-[#F36C21] h-full rounded-full w-[60%] transition-all duration-500"></div>
+</div>
+<div class="flex justify-between items-center text-[#7A7A78] text-[11px] font-medium pt-0.5">
+<span>Progress</span>
+<span class="font-semibold text-[#141414]">3 of 5 done</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Quick Notes Metric -->
+<div class="bg-white rounded-[26px] p-4 flex flex-col justify-between border border-[#EAEAE6] shadow-[0_4px_16px_rgba(0,0,0,0.03)] relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="text-[12px] text-[#7A7A78] font-semibold tracking-wide">Quick Notes</span>
+<div class="w-7 h-7 rounded-full bg-[#F7F7F5] flex items-center justify-center text-[#141414]">
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<div class="my-2.5">
+<div class="text-[32px] font-bold text-[#141414] tracking-tight leading-none">14 <span class="text-[14px] text-[#7A7A78] font-normal">items</span></div>
+</div>
+<div class="flex items-center pt-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#F7F7F5] border border-[#EDEDE8] text-[#141414] text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px] text-[#F36C21]" style="font-variation-settings: 'FILL' 1;">push_pin</span>
+<span>3 pinned</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Task Focus List Section -->
+<section class="flex flex-col space-y-3 pt-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h3 class="text-[20px] font-bold text-[#141414] tracking-tight">Today's Focus</h3>
+<span class="w-5 h-5 rounded-full bg-[#EAEAE6] text-[#141414] text-[11px] flex items-center justify-center font-bold">3</span>
+</div>
+<button class="text-[13px] font-semibold text-[#F36C21] hover:underline" type="button">Reorder</button>
+</div>
+<div class="flex flex-col space-y-2.5" id="todo-container">
+<!-- Task 1 -->
+<article class="task-card flex items-center gap-3.5 p-3.5 bg-white border border-[#EAEAE6] rounded-[22px] shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all active:scale-[0.99] cursor-pointer" data-completed="false">
+<button aria-label="Mark task as complete" class="check-btn flex-shrink-0 w-7 h-7 rounded-full border-2 border-[#D1D1CB] flex items-center justify-center text-transparent hover:border-[#F36C21] transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="task-title text-[14px] font-semibold text-[#141414] truncate">Finalize UI System Guidelines</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-[#F4F4F2] text-[#555552] text-[11px] font-semibold">Engineering</span>
+<div class="flex items-center gap-1 text-[#7A7A78] text-[11px] font-medium">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+<span>4:00 PM</span>
+</div>
+</div>
+</div>
+<button aria-label="Task options" class="text-[#A1A19D] hover:text-[#141414] p-1.5 rounded-full hover:bg-[#F4F4F2] transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</article>
+<!-- Task 2 -->
+<article class="task-card flex items-center gap-3.5 p-3.5 bg-white border border-[#EAEAE6] rounded-[22px] shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all active:scale-[0.99] cursor-pointer" data-completed="false">
+<button aria-label="Mark task as complete" class="check-btn flex-shrink-0 w-7 h-7 rounded-full border-2 border-[#D1D1CB] flex items-center justify-center text-transparent hover:border-[#F36C21] transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="task-title text-[14px] font-semibold text-[#141414] truncate">Submit Database Architecture assignment</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-[#FFF0E8] text-[#F36C21] text-[11px] font-semibold">College</span>
+<div class="flex items-center gap-1 text-[#7A7A78] text-[11px] font-medium">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+<span>6:30 PM</span>
+</div>
+</div>
+</div>
+<button aria-label="Task options" class="text-[#A1A19D] hover:text-[#141414] p-1.5 rounded-full hover:bg-[#F4F4F2] transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</article>
+<!-- Task 3 (Completed State Demonstration) -->
+<article class="task-card flex items-center gap-3.5 p-3.5 bg-[#F9F9F8] border border-[#EDEDE8] rounded-[22px] transition-all active:scale-[0.99] cursor-pointer opacity-70" data-completed="true">
+<button aria-label="Task completed" class="check-btn flex-shrink-0 w-7 h-7 rounded-full bg-[#1A1A1A] border-2 border-[#1A1A1A] flex items-center justify-center text-white transition-all" type="button">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</button>
+<div class="flex flex-col flex-1 min-w-0">
+<span class="task-title text-[14px] text-[#7A7A78] line-through font-normal truncate">Review PR #142 for Auth Microservice</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-[#EAEAE6] text-[#7A7A78] text-[11px] font-medium">Engineering</span>
+<div class="flex items-center gap-1 text-[#9E9E9A] text-[11px] font-medium">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+<span>8:00 PM</span>
+</div>
+</div>
+</div>
+<button aria-label="Task options" class="text-[#B0B0AC] hover:text-[#141414] p-1.5 rounded-full hover:bg-[#F4F4F2] transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</article>
+</div>
+</section>
+<!-- Recent Notes Section (Modern clean tactile card inspired by smart devices list) -->
+<section class="flex flex-col space-y-3 pt-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h3 class="text-[20px] font-bold text-[#141414] tracking-tight">Recent Notes</h3>
+</div>
+<button class="text-[13px] font-semibold text-[#7A7A78] hover:text-[#141414] flex items-center gap-0.5 transition-colors" type="button">
+<span>View all</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Note Preview Card -->
+<article class="bg-white rounded-[26px] p-4 border border-[#EAEAE6] shadow-[0_4px_16px_rgba(0,0,0,0.03)] flex flex-col space-y-3 hover:border-[#D8D8D2] transition-all cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-[#FFF0E8] flex items-center justify-center text-[#F36C21] flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</div>
+<h4 class="text-[15px] text-[#141414] font-bold truncate">Spring Boot REST Endpoints</h4>
+</div>
+<button aria-label="Pinned note" class="text-[#F36C21] flex-shrink-0 w-7 h-7 rounded-full bg-[#F7F7F5] flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">push_pin</span>
+</button>
+</div>
+<p class="text-[13px] leading-relaxed text-[#555552] line-clamp-2">
+      Configured JWT filter chain with Redis token blacklist. Verified OpenAPI Swagger docs generation on <code class="text-[12px] px-1.5 py-0.5 rounded-md bg-[#F4F4F2] text-[#F36C21] font-mono">/api/v2/docs</code> with custom Bearer scheme.
+    </p>
+<div class="flex items-center justify-between pt-1 border-t border-[#F4F4F2]">
+<div class="flex items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-[#F4F4F2] text-[#555552] text-[11px] font-semibold">Backend</span>
+<span class="px-2.5 py-0.5 rounded-full bg-[#F4F4F2] text-[#555552] text-[11px] font-semibold">Security</span>
+</div>
+<div class="flex items-center gap-1 text-[#7A7A78] text-[11px] font-medium">
+<span class="material-symbols-outlined text-[13px]">history</span>
+<span>Updated 2h ago</span>
+</div>
+</div>
+</article>
+</section>
+<!-- Tactile Warm Floating Action Button (FAB) -->
+<div class="fixed right-5 bottom-24 z-40">
+<button aria-label="Create new item" class="w-14 h-14 rounded-full bg-[#F36C21] text-white flex items-center justify-center shadow-[0_8px_24px_rgba(243,108,33,0.38)] active:scale-95 hover:brightness-105 transition-all" id="fab-create" type="button">
+<span class="material-symbols-outlined text-[26px]">add</span>
+</button>
+</div>
+</div>
+<script>
+  (function() {
+    const taskCards = document.querySelectorAll('.task-card');
+    taskCards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('button[aria-label="Task options"]')) return;
+        
+        const isCompleted = card.getAttribute('data-completed') === 'true';
+        const checkBtn = card.querySelector('.check-btn');
+        const title = card.querySelector('.task-title');
+        
+        if (!isCompleted) {
+          card.setAttribute('data-completed', 'true');
+          card.classList.remove('bg-white', 'border-[#EAEAE6]');
+          card.classList.add('bg-[#F9F9F8]', 'border-[#EDEDE8]', 'opacity-70');
+          checkBtn.className = 'check-btn flex-shrink-0 w-7 h-7 rounded-full bg-[#1A1A1A] border-2 border-[#1A1A1A] flex items-center justify-center text-white transition-all';
+          title.className = 'task-title text-[14px] text-[#7A7A78] line-through font-normal truncate';
+        } else {
+          card.setAttribute('data-completed', 'false');
+          card.classList.remove('bg-[#F9F9F8]', 'border-[#EDEDE8]', 'opacity-70');
+          card.classList.add('bg-white', 'border-[#EAEAE6]');
+          checkBtn.className = 'check-btn flex-shrink-0 w-7 h-7 rounded-full border-2 border-[#D1D1CB] flex items-center justify-center text-transparent hover:border-[#F36C21] transition-all';
+          title.className = 'task-title text-[14px] font-semibold text-[#141414] truncate';
+        }
+      });
+    });
+
+    const fab = document.getElementById('fab-create');
+    if (fab) {
+      fab.addEventListener('click', () => {
+        fab.classList.add('scale-90');
+        setTimeout(() => {
+          fab.classList.remove('scale-90');
+        }, 150);
+      });
+    }
+  })();
+</script></main>
+<!-- Tactile Warm Light Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 pb-safe bg-white/90 backdrop-blur-xl border-t border-[#EDEDE8] shadow-[0_-4px_24px_rgba(0,0,0,0.04)]">
+<div class="flex justify-around items-center h-16 px-5 max-w-md mx-auto">
+<a aria-current="page" class="group flex flex-col items-center justify-center min-w-[64px] min-h-[48px] py-1 transition-colors" data-path="tasks" href="#">
+<div class="w-12 h-7 rounded-full bg-[#1A1A1A] text-white flex items-center justify-center transition-transform group-active:scale-95">
+<span class="material-symbols-outlined text-[19px]">check_circle</span>
+</div>
+<span class="text-[11px] text-[#141414] font-bold mt-1 tracking-tight">Tasks</span>
+</a>
+<a class="group flex flex-col items-center justify-center min-w-[64px] min-h-[48px] py-1 transition-colors" data-path="notes" href="#">
+<div class="w-12 h-7 rounded-full flex items-center justify-center text-[#7A7A78] group-hover:text-[#141414] hover:bg-[#F4F4F2] transition-all">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</div>
+<span class="text-[11px] text-[#7A7A78] group-hover:text-[#141414] font-semibold mt-1 tracking-tight">Notes</span>
+</a>
+<a class="group flex flex-col items-center justify-center min-w-[64px] min-h-[48px] py-1 transition-colors" data-path="search" href="#">
+<div class="w-12 h-7 rounded-full flex items-center justify-center text-[#7A7A78] group-hover:text-[#141414] hover:bg-[#F4F4F2] transition-all">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<span class="text-[11px] text-[#7A7A78] group-hover:text-[#141414] font-semibold mt-1 tracking-tight">Search</span>
+</a>
+</div>
+</nav>
+</body></html>
